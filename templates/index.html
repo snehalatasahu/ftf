@@ -99,7 +99,11 @@
 									<li><a href="{% static '#' %}">API</a></li>
 								</ul>
 							</li>
+							{% if user.is_authenticated %}
 							<li><a href="social/home">Connectt</a></li>
+							{% else %}
+							<li><a href="accounts/log-in">Connectt</a></li>
+							{% endif %}
 							{% if user.is_authenticated %}
 							<li>Hello, {{user.username}}</li>
 							<li class="btn-cta"><a href="accounts/log-out"><span>Logout</span></a></li>

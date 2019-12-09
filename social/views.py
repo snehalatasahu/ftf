@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import TemplateView
 from django.utils.decorators import method_decorator
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required 
 from django.views.generic.list import ListView
 from social.models import FollowUser, MyPost, MyProfile, PostComment, PostLike
 from django.views.generic.detail import DetailView
@@ -12,7 +12,7 @@ from django.http.response import HttpResponseRedirect
 # Create your views here.
 @method_decorator(login_required, name="dispatch")    
 class HomeView(TemplateView):
-    template_name = "social/base.html"
+    template_name = "social/home.html"
     def get_context_data(self, **kwargs):
         context = TemplateView.get_context_data(self, **kwargs)
         followedList = FollowUser.objects.filter(followed_by = self.request.user.myprofile)
@@ -31,12 +31,6 @@ class HomeView(TemplateView):
         context["mypost_list"] = postList
         return context;
 
-
-class AboutView(TemplateView):
-    template_name = "social/about.html"
-
-class ContactView(TemplateView):
-    template_name = "social/contact.html"
 
 def follow(req, pk):
     user = MyProfile.objects.get(pk=pk)
@@ -62,7 +56,7 @@ def unlike(req, pk):
 @method_decorator(login_required, name="dispatch")    
 class MyProfileUpdateView(UpdateView):
     model = MyProfile
-    fields = ["name", "age", "address", "status", "gender", "phone_no", "description", "pic"]
+    fields = ["name", "age", "description", "pic"]
 
 @method_decorator(login_required, name="dispatch")    
 class MyPostCreate(CreateView):
@@ -99,7 +93,7 @@ class MyProfileListView(ListView):
         si = self.request.GET.get("si")
         if si == None:
             si = ""
-        profList = MyProfile.objects.filter(Q(name__icontains = si) | Q(address__icontains = si) | Q(gender__icontains = si) | Q(status__icontains = si)).order_by("-id");
+        profList = MyProfile.objects.filter(Q(name__icontains = si)).order_by("-id");
         for p1 in profList:
             p1.followed = False
             ob = FollowUser.objects.filter(profile = p1,followed_by=self.request.user.myprofile)

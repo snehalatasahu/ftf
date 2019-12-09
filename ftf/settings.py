@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'ftfapp',
     'accounts',
     'social',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -129,3 +130,7 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+PROJECT_ROOT = os.path.realpath(os.path.dirname(__file__))
+MEDIA_ROOT = PROJECT_ROOT + '/static/'
+MEDIA_URL = '/media/' 

@@ -5,9 +5,6 @@ from social import views
 from django.views.generic.base import RedirectView
 urlpatterns = [ 
     path('home/', views.HomeView.as_view()),
-    path('about/', views.AboutView.as_view()),
-    path('contact/', views.ContactView.as_view()),
-    
     path('profile/edit/<int:pk>', views.MyProfileUpdateView.as_view(success_url="/social/home")),
     
     path('mypost/create/', views.MyPostCreate.as_view(success_url="/social/mypost")),
