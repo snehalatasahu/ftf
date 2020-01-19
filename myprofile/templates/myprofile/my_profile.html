@@ -1,0 +1,123 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'myprofile/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myprofile/css/style.css' %}">
+    <script src="https://kit.fontawesome.com/9e28651c38.js" crossorigin="anonymous"></script>
+    <title>Profile</title>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0 pb-sm-2">
+        <header class="bg-success clearfix">
+            <div class="w-50 p-3 pl-4 d-inline-block float-left">
+                <a href="/"><img src="/static/images/home-logo.png"></a>
+            </div>
+            <nav class="d-inline-block float-right pt-4">
+                <a href="/" class="text-white px-4 text-decoration-none menua" style="font-size: 20px;">Home</a>
+                <a href="/static/lessons/lessons.html" class="text-white px-4 text-decoration-none menua" style="font-size: 20px;">Lessons</a>
+                <a href="/social/home" class="text-white px-4 text-decoration-none menua" style="font-size: 20px;">Connectt</a>
+                <div class="menua d-inline-block px-4">
+                <a href="#" class="text-light text-decoration-none"><i class="fas fa-user-circle" style="font-size: 20px;"></i></a>
+                </div>
+            </nav>
+        </header>
+    </div> 
+    <div class="container">
+        {% for persons in persons %}
+        <div class="media">
+            <i class="fas fa-user fa-7x align-self-center"></i>
+            <!--<img src="{{persons.image.url}} ">-->
+            <div class="media-body p-3">
+                <h1>{{persons.name}}</h1>
+                <div class="row">
+                    <div class="col-4 pl-4">
+                        <h6>Heartrate:</h6>
+                        <p class="mb-3 bg-white d-inline-block" style="width: 130px;border:none;border-bottom: 2px solid rgb(90, 170, 137);">{{persons.heartrate}}</p>
+                        <small>bpm</small>
+                        <h6>D.O.B:</h6>
+                        <p class="mb-3 bg-white d-inline-block" style="width: 150px;border:none;border-bottom: 2px solid rgb(90, 170, 137);">{{persons.dob}}</p>
+                        <small>dd-mm-yy</small>
+                    </div>
+                    <div class="col-4">
+                        <h6>Weight:</h6>
+                        <p class="mb-3 bg-white d-inline-block" style="width: 120px;border:none;border-bottom: 2px solid rgb(90, 170, 137);">{{persons.weight}}</p>
+                        <small>kg</small>
+                        <h6>Height:</h6>
+                        <p class="mb-3 bg-white d-inline-block" style="width: 120px;border:none;border-bottom: 2px solid rgb(90, 170, 137);">{{persons.height}}</p>
+                        <small>cm</small>
+                    </div>
+                    <div class="col-4">
+                        <h6>Daily Goal:</h6>
+                        <p class="mb-3 bg-white d-inline-block" style="width: 120px;border:none;border-bottom: 2px solid rgb(90, 170, 137);">{{persons.dailygoal}}(55-85)</p>
+                        <small>% heartrate</small>
+                        <h6>Workout Time:</h6>
+                        <p class="mb-3 bg-white d-inline-block" style="width: 120px;border:none;border-bottom: 2px solid rgb(90, 170, 137);">{{persons.workouttime}}</p>
+                        <small>min</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>   
+            <h3>Weekly chart:</h3>         
+            <section>
+                <h4 class="p-2 pl-5" style="font-family: cursive,sans-serif;"></h4>
+                <div class="pl-5 bpm">bpm</div>
+                <div class="box">                    
+                    <div class="day">
+                        <div class="graph" style="height: {{persons.mon}}%;">
+                            <div class="number">{{persons.mon}}</div>                            
+                        </div>
+                        <div class="name">Mon</div>
+                    </div>
+                    <div class="day">
+                        <div class="graph" style="height: {{persons.tue}}%;">
+                            <div class="number">{{persons.tue}}</div>
+                        </div>
+                        <div class="name">Tue</div>
+                    </div>
+                    <div class="day">
+                        <div class="graph" style="height: {{persons.wed}}%;">
+                            <div class="number">{{persons.wed}}</div>
+                        </div>
+                        <div class="name">Wed</div>
+                    </div>
+                    <div class="day">
+                        <div class="graph" style="height: {{persons.thr}}%;">
+                            <div class="number">{{persons.thr}}</div>
+                        </div>
+                        <div class="name">Thr</div>
+                    </div>
+                    <div class="day">
+                        <div class="graph" style="height: {{persons.fri}}%;">
+                            <div class="number">{{persons.fri}}</div>                            
+                        </div>
+                        <div class="name">Fri</div>
+                    </div>
+                    <div class="day">
+                        <div class="graph" style="height: {{persons.sat}}%;">
+                            <div class="number">{{persons.sat}}</div>                            
+                        </div>
+                        <div class="name">Sat</div>
+                    </div>
+                    <div class="day">
+                        <div class="graph" style="height: {{persons.sun}}%;">
+                            <div class="number">{{persons.sun}}</div>                            
+                        </div>
+                        <div class="name">Sun</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="container-fluid mt-2 bg-dark ">
+        <footer class="text-center text-light">Copyright &copy; 2019_fittofabteam</footer>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>

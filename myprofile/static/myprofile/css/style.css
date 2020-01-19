@@ -1,0 +1,130 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: #e3e3e3;
+}
+.headera{
+    font-size: 35px;
+    width: 400px;
+    padding-left: 30px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.navlink:hover{
+    background-color: black;
+}
+.sectionrow{
+    border-right: 1px solid #bebebe;
+}
+.kma{
+    border: 1px solid white;
+    border-radius: 20px;
+    background-color: #007bff;
+}
+.kma:hover{
+    background-color: black;
+    border: solid #111111 2px;
+}
+.custo{
+    background-color:#007bff;
+}
+.custoas:hover{
+    background-color: black;
+}
+.image{
+    height: 150px;
+    width: 150px;
+}
+.imagebody{
+    height: 60px;
+    width: 60px;
+}
+.cfi{
+    size: 7ex;
+}
+.nava{
+    text-decoration-color: white;
+}
+.menua:hover{
+    background-color: rgb(121, 192, 127);
+}
+
+section{
+    width: 100%;
+    height: 70vh;
+    background: linear-gradient(0deg,#1c77a1,#1ab448);   
+}
+.box{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translateX(-50%,-50%);
+    width: 500px;
+    height: 300px;
+    background: transparent;
+    border-bottom: 2px solid #000;
+    border-left: 2px solid #000;
+    display: flex;
+}
+.box .day{
+    position: relative;
+    flex: 1;
+    text-align: center;
+}
+.box .day .graph{
+    position: absolute;
+    width: 40px;
+    background: rgba(0,0,0,.1);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.box .day .graph::before
+{
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 0;
+    background: linear-gradient(0deg,#2709ac);
+}
+.box .day .graph::after
+{
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(199, 147, 34, 0.671);
+}
+.box .day .graph .number
+{
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    font-weight:bold;
+}
+.box .day .name{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    color: #fff;
+    background: #001e8a;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+.bpm{
+    margin-top: 200px;
+    margin-left: 150px;
+    font-size: 20px;
+    font-weight: bold;
+}

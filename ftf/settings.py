@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'ftfapp',
     'accounts',
     'social',
+    'myprofile',
     'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',

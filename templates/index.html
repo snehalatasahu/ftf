@@ -88,19 +88,18 @@
 					<div class="col-xs-10 text-right menu-1">
 						<ul>
 							<!-- <li class="active"><a href="index.html">Home</a></li> -->
-							<li><a href="{% static 'work.html' %}">Work</a></li>
-							<li><a href="{% static 'about.html' %}">About</a></li>
+							
 							<li class="has-dropdown">
-								<a href="{% static 'services.html' %}">Services</a>
-								<ul class="dropdown">
-									<li><a href="{% static '#' %}">Web Design</a></li>
-									<li><a href="{% static '#' %}">eCommerce</a></li>
-									<li><a href="{% static '#' %}">Branding</a></li>
-									<li><a href="{% static '#' %}">API</a></li>
-								</ul>
+								<a href="{% static 'lessons/lessons.html' %}">Lessons</a>
 							</li>
 							{% if user.is_authenticated %}
 							<li><a href="social/home">Connectt</a></li>
+							{% else %}
+							<li><a href="accounts/log-in">Connectt</a></li>
+							{% endif %}
+							</li>
+							{% if user.is_authenticated %}
+							<li><a href="myprofile/my-profile">Heart Status</a></li>
 							{% else %}
 							<li><a href="accounts/log-in">Connectt</a></li>
 							{% endif %}
@@ -126,7 +125,7 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<h1>Working hard is <strong>rewarding</strong></h1>
-							<p><a href="{% static '#' %}" class="btn btn-primary btn-lg with-arrow">View Our Work</a></p>
+							<p><a href="myprofile/my-profile" class="btn btn-primary btn-lg with-arrow">View your progress</a></p>
 						</div>
 					</div>
 				</div>
@@ -139,7 +138,7 @@
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
 					<h2>How it Works</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+					<p>When you get to learn, track and share about fitness.. All at one place.. it becomes easier to achieve the goals</p>
 				</div>
 			</div>
 			<div class="row">
@@ -155,8 +154,8 @@
 								<span class="icon">
 									<i class="icon-image"></i>
 								</span>
-								<h3>Retina Ready</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+								<h3>Learn</h3>
+								<p>Keep visiting the website to learn about new exercises and the effective ways of doing it</p>
 							</div>
 						</div>
 						<div class="col-md-12 col-sm-12">
@@ -164,8 +163,8 @@
 								<span class="icon">
 									<i class="icon-laptop"></i>
 								</span>
-								<h3>Fully Responsive</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+								<h3>Track</h3>
+								<p>monitor your real time heart rate and your records will be saved for later reference</p>
 							</div>
 						</div>
 						<div class="col-md-12 col-sm-12">
@@ -173,8 +172,8 @@
 								<span class="icon">
 									<i class="icon-air-play"></i>
 								</span>
-								<h3>Web Starter</h3>
-								<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove</p>
+								<h3>Share</h3>
+								<p>You can share about your journey of being fit and learn about those who are already achieving it. "Connectt" helps to create such an environment which will motivate people for being healthy</p>
 							</div>
 						</div>
 					</div>
@@ -183,177 +182,43 @@
 		</div>
 	</div>
 	
-	<div id="fh5co-project">
+	<div id="fh5co-project" style="background-image:url({% static 'images/project-2.jpg' %})">
 		<div class="container">
 			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Our Latest Work</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading ">
+					<h2><font color="white">Take a quick look</font></h2>
 				</div>
 			</div>
 		</div>
 		<div class="project-content">
 			<div class="col-forth">
-				<div class="project animate-box" style="background-image:url({% static 'images/project-8.jpg' %});">
-					<a href="{% static '#' %}" class="desc">
-						<span>Application</span>
-						<h3>Project Name</h3>
+				<div class="project animate-box" style="background-image:url({% static 'images/learn.jpg' %})">
+					<a href="/static/lessons/lessons.html" class="desc">
+						<span>Learn about new exercises</span>
+						<h3>Lessons</h3>
 					</a>
 				</div>
 			</div>
 			<div class="col-forth">
-				<div class="project animate-box" style="background-image:url({% static 'images/project-1.jpg' %});">
-					<a href="{% static '#' %}" class="desc">
-						<span>Application</span>
-						<h3>Project Name</h3>
+				<div class="project animate-box" style="background-image:url({% static 'images/track.jpg' %})">
+					<a href="myprofile/my-profile" class="desc">
+						<span>Check you heart status</span>
+						<h3>Track</h3>
 					</a>
 				</div>
 			</div>
 			<div class="col-forth">
-				<div class="project animate-box" style="background-image:url({% static 'images/project-2.jpg' %});">
-					<a href="{% static '#' %}" class="desc">
-						<span>Application</span>
-						<h3>Project Name</h3>
-					</a>
-				</div>
-			</div>
-			<div class="col-forth">
-				<div class="project animate-box" style="background-image:url({% static 'images/project-3.jpg' %});">
-					<a href="{% static '#' %}" class="desc">
-						<span>Application</span>
-						<h3>Project Name</h3>
+				<div class="project animate-box" style="background-image:url({% static 'images/connectt.jpg' %})">
+					<a href="/social/home" class="desc">
+						<span>Socialize with fitness freaks</span>
+						<h3>Connectt</h3>
 					</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div id="fh5co-testimonial" class="fh5co-bg-section">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Happy Clients</h2>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-md-10 col-md-offset-1">
-					<div class="row animate-box">
-						<div class="owl-carousel owl-carousel-fullwidth">
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="{% static 'images/person_1.jpg' %}" alt="user">
-									</figure>
-									<span>Jean Doe, via <a href="{% static '#' %}" class="twitter">Twitter</a></span>
-									<blockquote>
-										<p>&ldquo;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="{% static 'images/person_2.jpg' %}" alt="user">
-									</figure>
-									<span>John Doe, via <a href="{% static '#' %}" class="twitter">Twitter</a></span>
-									<blockquote>
-										<p>&ldquo;Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-							<div class="item">
-								<div class="testimony-slide active text-center">
-									<figure>
-										<img src="{% static 'images/person_3.jpg' %}" alt="user">
-									</figure>
-									<span>John Doe, via <a href="{% static '#' %}" class="twitter">Twitter</a></span>
-									<blockquote>
-										<p>&ldquo;Far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.&rdquo;</p>
-									</blockquote>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	
 
-
-	<div id="fh5co-started">
-		<div class="container">
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-					<h2>Lets Get Started</h2>
-					<p>Dignissimos asperiores vitae velit veniam totam fuga molestias accusamus alias autem provident. Odit ab aliquam dolor eius.</p>
-				</div>
-			</div>
-			<div class="row animate-box">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<p><a href="{% static '#' %}" class="btn btn-default btn-lg">Get in Touch</a></p>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<footer id="fh5co-footer" role="contentinfo">
-		<div class="container">
-			<div class="row row-pb-md">
-				<div class="col-md-4 fh5co-widget">
-					<h3>A Little About Run.</h3>
-					<p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
-					<p><a class="btn btn-primary btn-outline with-arrow" href="{% static '#' %}">Learn More <i class="icon-arrow-right"></i></a></p>
-				</div>
-				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
-					<ul class="fh5co-footer-links">
-						<li><a href="{% static '#' %}">About</a></li>
-						<li><a href="{% static '#' %}">Help</a></li>
-						<li><a href="{% static '#' %}">Contact</a></li>
-						<li><a href="{% static '#' %}">Terms</a></li>
-						<li><a href="{% static '#' %}">Meetups</a></li>
-					</ul>
-				</div>
-
-				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
-					<ul class="fh5co-footer-links">
-						<li><a href="{% static '#' %}">Shop</a></li>
-						<li><a href="{% static '#' %}">Privacy</a></li>
-						<li><a href="{% static '#' %}">Testimonials</a></li>
-						<li><a href="{% static '#' %}">Handbook</a></li>
-						<li><a href="{% static '#' %}">Held Desk</a></li>
-					</ul>
-				</div>
-
-				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
-					<ul class="fh5co-footer-links">
-						<li><a href="{% static '#' %}">Find Designers</a></li>
-						<li><a href="{% static '#' %}">Find Developers</a></li>
-						<li><a href="{% static '#' %}">Teams</a></li>
-						<li><a href="{% static '#' %}">Advertise</a></li>
-						<li><a href="{% static '#' %}">API</a></li>
-					</ul>
-				</div>
-			</div>
-
-			<div class="row copyright">
-				<div class="col-md-12 text-center">
-					<p>
-						<small class="block">&copy; 2016 Free HTML5. All Rights Reserved.</small> 
-						<small class="block">Designed by <a href="{% static 'http://freehtml5.co/' %}" target="_blank">FreeHTML5.co</a> Demo Images: <a href="{% static 'http://unsplash.co/' %}'" target="_blank">Unsplash</a></small>
-					</p>
-					<p>
-						<ul class="fh5co-social-icons">
-							<li><a href="{% static '#' %}"><i class="icon-twitter"></i></a></li>
-							<li><a href="{% static '#' %}"><i class="icon-facebook"></i></a></li>
-							<li><a href="{% static '#' %}"><i class="icon-linkedin"></i></a></li>
-							<li><a href="{% static '#' %}"><i class="icon-dribbble"></i></a></li>
-						</ul>
-					</p>
-				</div>
-			</div>
-
-		</div>
-	</footer>
-	</div>
 
 	<div class="gototop js-top">
 		<a href="{% static '#' %}" class="js-gotop"><i class="icon-arrow-up"></i></a>

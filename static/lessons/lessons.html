@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/9e28651c38.js" crossorigin="anonymous"></script>
+    <title>Lessons</title>
+    <style>
+        #more {display: none;}
+        #more1 {display: none;}
+        #more2 {display: none;}
+        #more3 {display: none;}
+        #more4 {display: none;}
+    </style>
+</head>
+<body>
+    <div class="container-fluid m-0 p-0 pb-sm-2 ">
+        <header class="bg-success clearfix">
+            <div class="w-50 p-3 pl-4 d-inline-block float-left">
+                <a class="navbar-brand" href="/"><img src="/static/images/home-logo.png"></a>
+            </div>
+            <nav class="d-inline-block float-right pt-4">
+                <a href="/" class="text-white px-4 text-decoration-none menua" style="font-size: 20px;">Home</a>
+                <a href="/myprofile/my-profile" class="text-white px-4 text-decoration-none menua" style="font-size: 20px;">Your progress</a>
+                <a href="/social/home" class="text-white px-4 text-decoration-none menua" style="font-size: 20px;">Connectt</a>
+                <!--<div class="menua d-inline-block px-4">
+                {% if user.is_authenticated %}
+
+				<a href="/myprofile/my-profile" class="text-light text-decoration-none" style="font-size: 20px;"><i class="fas fa-user-circle" style="font-size: 20px;"></i>Hello, {{user.username}}</a>
+                <a href="/accounts/log-out" class="text-light text-decoration-none" style="font-size: 20px;"><span>Logout</span></a>
+
+                {% else %}
+                
+                <a href="/accounts/log-in"><span>Login</span></a>
+                
+				{% endif %}
+                </div>-->
+            </nav>
+        </header>
+    <div class="container">
+        <h3 class="text-center pt-2 text-justify">Lessons Available</h3>
+        <ul class="list-unstyled">
+            <li class="media m-2">
+                <img src="images/runningcardio.jpg" class="mt-3 image" style="object-fit: cover;">
+                <div class="media-body p-2">
+                    <h4>Cardio Exercises</h4>
+                    <p>Cardio exercise is one of the most important things you can do for your body, whether you want to lose weight, burn fat, or generally improve your health.You can use machines like a treadmill or an elliptical trainer, or you can create your own workout at home with a variety of cardio exercises like jogging in place, jumping jacks, or burpees. Anything that gets your heart rate into your target heart rate zone will work, but there are some workouts that give you a little more bang for your buck.
+                        <span id="dots">...</span></p>
+                    <p><span id="more">There's no "right" cardio exercise, and the best choice for you is the one that is the most challenging, but that you can perform safely and enjoy. Exercises that intervals and circuits can help you get the most bang for your time spent.Going to the gym can sometimes feel like a drag, but the health benefits of regular exercise are worth the effort. Cardio exercises are an essential component to help women maintain a healthy lifestyle. But what are cardio workouts? Are some cardio exercises better than others? We’re diving into the best cardio workouts for women, so you know what to do the next time you hit the gym.
+                    </span></p>
+                    <button onclick="myFunction()" id="myBtn" class="btn btn-sm p-0">Read more</button>
+                </div>
+            </li>
+            <li class="media m-2">
+                <img src="images/yoga.jpg" class="mt-3 image"style="object-fit: cover;">
+                <div class="media-body p-2">
+                    <h4>Yoga</h4>
+                    <p>Yoga is a mind and body practice with a 5,000-year history in ancient Indian philosophy. Various styles of yoga combine physical postures, breathing techniques, and meditation or relaxation.Yoga is a great way to work on your flexibility and strength. Just about everyone can do it, too -- it's not just for people who can touch their toes or want to meditate.Some types of yoga are about relaxation. In others, you move more. Most types focus on learning poses, called asanas.
+                        <span id="dots1">...</span></p>
+                    <p><span id="more1"> They also usually include attention to breathing.At any level of yoga, you'll probably start to notice benefits soon. In one study, people improved their flexibility by up to 35% after only 8 weeks of yoga.In the modern world, the South Asian art of yoga has expanded to all corners of the globe. While it is now a popular form of exercise and meditation, this has not always been the case.</span></p>
+                    <button onclick="myFunction1()" id="myBtn1" class="btn btn-sm p-0">Read more</button>
+                </div>
+            </li>
+            <li class="media m-2">
+                <img src="images/aerobic.jpg" class="mt-3 image"style="object-fit: cover;">
+                <div class="media-body p-2">
+                    <h4>Aerobic</h4>
+                    <p>Aerobic exercise is any type of cardiovascular conditioning. It can include activities like brisk walking, swimming, running, or cycling. You probably know it as “cardio.”
+                        <span id="dots2">...</span></p>
+                    <p><span id="more2">Aerobic exercise is sometimes known as "cardio" -- exercise that requires pumping of oxygenated blood by the heart to deliver oxygen to working muscles.Aerobic exercise stimulates the heart rate and breathing rate to increase in a way that can be sustained for the exercise session. In contrast, anaerobic ("without oxygen") exercise is activity that causes you to be quickly out of breath, like sprinting or lifting a heavy weight.By definition, aerobic exercise means “with oxygen.” Your breathing and heart rate will increase during aerobic activities. Aerobic exercise helps keep your heart, lungs, and circulatory system healthy.</span></p>
+                    <button onclick="myFunction2()" id="myBtn2" class="btn btn-sm p-0">Read more</button>
+                </div>
+            </li>
+            <li class="media m-2">
+                <img src="images/intense.jpg" class="mt-3 image"style="object-fit: cover;">
+                <div class="media-body p-2">
+                    <h4>Intense</h4>
+                    <p>When it comes to your fitness levels—or the amount of work your heart, lungs, and limbs can perform—there’s no doubt that a good, hard sweat is great for you. Vigorous exercise like running, swimming or playing tennis leads to greater improvements than easy or moderate workouts, like brisk walking, ballroom dancing and slow bike-riding.
+                        <span id="dots3">...</span></p>
+                    <p><span id="more3"> But fitness and health, while closely related, are not always aligned. Research is now finding that you don’t have to put yourself through punishing workouts in order to optimize your health.In a study last year, scientists from the U.S. and Europe found something surprising: the more moderate exercise people do, the more their cardiovascular health improves and their mortality risk drops. When it comes to vigorous exercise, smaller amounts seem to be linked with maximal health benefits.</span></p>
+                    <button onclick="myFunction3()" id="myBtn3" class="btn btn-sm p-0">Read more</button>
+                </div>
+            </li>  
+            <li class="media m-2">
+                <img src="images/yoga.jpg" class="mt-3 image"style="object-fit: cover;">
+                <div class="media-body p-2">
+                    <h4>Yoga</h4>
+                    <p>Meditation is a practice where an individual uses a technique – such as mindfulness, or focusing the mind on a particular object, thought or activity – to train attention and awareness, and achieve a mentally clear and emotionally calm and stable state.Scholars have found meditation difficult to define, as practices vary both between traditions and within them.
+                        <span id="dots4">...</span></p>
+                    <p><span id="more4">Meditation has been practiced since antiquity in numerous religious traditions, often as part of the path towards enlightenment and self realization. Some of the earliest written records of meditation (Dhyana), come from the Hindu traditions of Vedantism. Since the 19th century, Asian meditative techniques have spread to other cultures where they have also found application in non-spiritual contexts, such as business and health.</span></p>
+                    <button onclick="myFunction4()" id="myBtn4" class="btn btn-sm p-0">Read more</button>
+                </div>
+            </li>          
+        </ul>
+    </div>
+    <div class="container-fluid bg-dark">
+        <footer class="text-center text-light">Copyright &copy; 2019_FitToFab_team</footer>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+</body>
+</html>
