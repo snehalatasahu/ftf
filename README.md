@@ -10,5 +10,5 @@ This project is built to assist to adapt the people to a healthy and fit lifesty
 - Django
 
 ## Database Design
-![database](https://drive.google.com/file/d/167DY1MK16NXUuc1r5C8gFADf3E5cM8YZ/view?usp=sharing)
+![](https://drive.google.com/uc?export=view&id=167DY1MK16NXUuc1r5C8gFADf3E5cM8YZ)
 
